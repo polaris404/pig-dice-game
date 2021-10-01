@@ -92,8 +92,8 @@ header {
   position: relative;
   display: flex;
   text-transform: uppercase;
-  width: 100rem;
-  height: 70%;
+  width: 70%;
+  height: 60rem;
   align-items: center;
   color: #802e2c;
   background-color: #ffedd3;
