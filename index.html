@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <button class="btn-rules">Game Rules</button>
+      </div>
+      <div class="input">
+        <div class="label">
+          <label for="max-score">Max Score: </label>
+          <input type="number" placeholder=" DEFAULT: 100" id="max-score" />
+        </div>
+        <button class="submit">SUBMIT</button>
+      </div>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Game Rules:</h1>
+        <ul>
+          <li>
+            On a turn, a player rolls the die 🎲 repeatedly. The goal is to
+            accumulate as many points as possible, adding up (hold) the numbers
+            rolled on the die 🎲.
+          </li>
+          <li>
+            However, if a player rolls a 1, the player's turn is over and any
+            points they have accumulated during this turn are forfeited.
+          </li>
+          <li>
+            Rolling a 1 doesn't wipe out your entire score from previous turns,
+            just the total earned during that particular roll.
+          </li>
+          <li>
+            A player has to choose to hold (stop rolling the die 🎲) if they do
+            not want to take a chance of rolling a 1 and losing all of their
+            points from this turn.
+          </li>
+          <li>
+            If the player chooses to hold, all of the points rolled during that
+            turn are added to his or her score. When a player reaches certain
+            points(Default is 100), the game ends and that player is the winner.
+          </li>
+          <li>
+            You can change the score limit by submitting the new input value.
+          </li>
+        </ul>
+      </div>
+      <div class="overlay hidden"></div>
+    </header>
+
+    <div class="main">
+      <section class="player player--0 current-player">
+        <p class="name--0">Player 1</p>
+        <p class="score score--0">0</p>
+        <div class="current-section">
+          <p>Current Score</p>
+          <p class="current current--0">0</p>
+        </div>
+      </section>
+
+      <section class="player player--1">
+        <p class="name--1">Player 2</p>
+        <p class="score score--1">0</p>
+        <div class="current-section">
+          <p>Current Score</p>
+          <p class="current current--1">0</p>
+        </div>
+      </section>
+
+      <section class="menu">
+        <button class="btn btn-newgame">New Game</button>
+        <div class="div-img">
+          <img src="imgs/dice-1.png" alt="" class="img hidden" />
+        </div>
+        <div class="menu-bottom">
+          <button class="btn btn-roll">Roll Dice</button>
+          <button class="btn btn-hold">Hold</button>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

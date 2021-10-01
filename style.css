@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffedd3;
+}
+
+/** HEADER */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #331212;
+  height: 10rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.btn-rules {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #331212;
+  letter-spacing: 0.3px;
+  background-color: #ffedd3;
+  text-transform: uppercase;
+  border: transparent;
+  border-bottom: 2px solid #ffedd3;
+  transition: all 0.3s;
+}
+
+.btn-rules:hover {
+  color: #802e2c;
+  border-bottom: 2px solid #802e2c;
+}
+
+.submit {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #ffedd3;
+  background-color: #331212;
+  border: transparent;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s;
+}
+
+.submit:hover,
+.submit:active {
+  background-color: #472a2a;
+  cursor: pointer;
+}
+
+#max-score {
+  height: 2.4rem;
+  width: 12rem;
+  text-transform: capitalize;
+  background-color: #ffedd3;
+  border: 2px solid #331212;
+  border-radius: 9px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** MAIN BOX */
+
+.main {
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+  width: 100rem;
+  height: 60rem;
+  align-items: center;
+  color: #802e2c;
+  background-color: #ffedd3;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+}
+
+.player {
+  width: 50%;
+  height: 100%;
+  padding: 8rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+  transition: all 0.5s;
+}
+
+.name--0,
+.name--1 {
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+.score {
+  font-size: 8rem;
+}
+
+.current-section {
+  font-size: 2rem;
+  background-color: #ffedd3;
+  border-radius: 10px;
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.current-section .current {
+  font-size: 4rem;
+}
+
+.current-player {
+  background-color: #e6534f;
+  transition: all 0.3s;
+}
+
+/** GAME MENU */
+
+.menu {
+  position: absolute;
+  height: 50rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+
+  /* justify-content: space-between; */
+}
+
+.menu-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  color: #331212;
+  background-color: #ffedd3;
+  background: transparent;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 1.2rem 2.4rem;
+  /* border: none; */
+  border: 2px solid #331212;
+  border-radius: 999px;
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn:hover,
+.btn:active {
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+}
+
+.div-img {
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+  height: 10rem;
+  transition: all 1s;
+}
+
+img {
+  width: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+/** Modal */
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  color: #802e2c;
+  margin-bottom: 3rem;
+}
+
+ul {
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
